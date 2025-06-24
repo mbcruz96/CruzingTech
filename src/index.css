@@ -1,0 +1,238 @@
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    background-color: rgb(48, 45, 45);
+    position: fixed;
+    opacity: .75;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+}
+
+.logo {
+    display: flex;
+    /* justify-content: center;
+    align-items: center;
+    padding-left: 300px;
+    width: 100%; */
+    opacity: 1;
+    color: white;
+}
+
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 15px;
+    opacity: 1;
+    color: white;
+}
+
+.links > a {
+    font-size: 1rem;
+    cursor: pointer;
+    
+}
+
+.section-container {
+    display: flex;
+    /* margin: 40px 40px 40px 40px; */
+    height: 600px;
+
+}
+
+.about-container {
+    display: flex;
+    margin-top: 100px;
+    /* margin: 40px 40px 40px 40px; */
+    height: 600px;
+
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 50%;
+    overflow: hidden;
+    background-color: white;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.about-image > img {
+    height: 100%;
+    border-radius: 60px;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.btn-pane {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 5px; */
+    height: 25%;
+    width: 100%;
+}
+
+.btn-pane > button {
+    background-color: rgb(48, 45, 45);
+    color: white;
+    /* border: solid, white, 1px; */
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    /* border-radius: 5px; */
+
+}
+.btn-pane > button:hover {
+    background-color: rgb(189, 118, 25);
+    color: white;
+    transform: scale(1.05);
+}
+
+.active-btn {
+    border: 2px solid white;
+    box-shadow: 0 0 10px 2px white;
+    z-index: 1;
+}
+
+
+/* .btn-pane > button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5
+} */
+
+.about-section {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 75px;
+
+}
+
+.education-section > h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.education-section > p {
+    display: flex;
+    justify-content: center;
+}
+
+.school-container {
+    margin-bottom: 30px;
+    margin-right: 20px;
+}
+.school-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+/* .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.logo-container > a{
+    width: 50px;
+    height: auto;
+
+}
+
+.resume-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resume-container > button {
+  background-color: rgb(189, 118, 25);
+  width: 75%;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+  gap: 10px;
+  border-radius: 60px;
+} */
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    width: 50%;
+}
+
+.services-list > span {
+    display: flex;
+    overflow: hidden;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 50%;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+}
+
+.services-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 1.5rem;
+}
+
+.hireMe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
