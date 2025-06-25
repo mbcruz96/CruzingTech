@@ -2,7 +2,7 @@ export default [
     {
         id: 1,
         name: "Python",
-        image: "src/assets/technologies/python-logo.svg",
+        image: "/src/assets/technologies/python-logo.svg",
         type: "core",
         category: ""
 
