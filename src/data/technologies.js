@@ -2,7 +2,7 @@ export default [
     {
         id: 1,
         name: "Python",
-        image: "/src/assets/technologies/python-logo.svg",
+        image: "../assets/technologies/python-logo.svg",
         type: "core",
         category: ""
 
@@ -10,7 +10,7 @@ export default [
     {
         id: 2,
         name: "C++",
-        image: "/src/assets/technologies/c++-logo.svg",
+        image: "../assets/technologies/c++-logo.svg",
         type: "core",
         category: "",
 
@@ -18,7 +18,7 @@ export default [
     {
         id: 3,
         name: "C#",
-        image: "/src/assets/technologies/csharp-logo.svg",
+        image: "../assets/technologies/csharp-logo.svg",
         type: "core",
         category: ""
 
@@ -26,7 +26,7 @@ export default [
     {
         id: 4,
         name: "C",
-        image: "/src/assets/technologies/c-logo.svg",
+        image: "../assets/technologies/c-logo.svg",
         type: "core",
         category: "",
 
@@ -34,7 +34,7 @@ export default [
     {
         id: 5,
         name: "MATLAB",
-        image: "/src/assets/technologies/matlab-logo.svg",
+        image: "../assets/technologies/matlab-logo.svg",
         type: "ml",
         category: "cv",
 
@@ -42,7 +42,7 @@ export default [
     {
         id: 6,
         name: "JavaScript",
-        image: "/src/assets/technologies/javascript-logo.svg",
+        image: "../assets/technologies/javascript-logo.svg",
         type: "core",
         category: "web"
 
@@ -50,7 +50,7 @@ export default [
     {
         id: 7,
         name: "HTML",
-        image: "/src/assets/technologies/html-logo.svg",
+        image: "../assets/technologies/html-logo.svg",
         type: "web",
         category: "front"
 
@@ -58,7 +58,7 @@ export default [
     {
         id: 8,
         name: "CSS",
-        image: "/src/assets/technologies/css-logo.svg",
+        image: "../assets/technologies/css-logo.svg",
         type: "web",
         category: "front",
 
@@ -66,7 +66,7 @@ export default [
     {
         id: 9,
         name: "React.js",
-        image: "/src/assets/technologies/react-logo.svg",
+        image: "../assets/technologies/react-logo.svg",
         type: "web",
         category: "front",
 
@@ -74,7 +74,7 @@ export default [
     {
         id: 10,
         name: "Node.js",
-        image: "/src/assets/technologies/nodejs-logo.svg",
+        image: "../assets/technologies/nodejs-logo.svg",
         type: "web",
         category: "back",
 
@@ -82,7 +82,7 @@ export default [
     {
         id: 11,
         name: "Tailwind",
-        image: "/src/assets/technologies/tailwind-logo.svg",
+        image: "../assets/technologies/tailwind-logo.svg",
         type: "web",
         category: "front",
 
@@ -90,7 +90,7 @@ export default [
     {
         id: 12,
         name: "TensorFlow",
-        image: "/src/assets/technologies/tensorflow-logo.svg",
+        image: "../assets/technologies/tensorflow-logo.svg",
         type: "ml",
         category: "",
 
@@ -98,7 +98,7 @@ export default [
     {
         id: 13,
         name: "PyTorch",
-        image: "/src/assets/technologies/pytorch-logo.svg",
+        image: "../assets/technologies/pytorch-logo.svg",
         type: "ml",
         category: "",
 
@@ -106,7 +106,7 @@ export default [
     {
         id: 14,
         name: "n8n",
-        image: "/src/assets/technologies/n8n-logo.svg",
+        image: "../assets/technologies/n8n-logo.svg",
         type: "ml",
         category: "automation",
 
@@ -114,7 +114,7 @@ export default [
     {
         id: 15,
         name: "GitHub",
-        image: "/src/assets/technologies/github-logo.svg",
+        image: "../assets/technologies/github-logo.svg",
         type: "dev",
         category: "version",
 
@@ -122,7 +122,7 @@ export default [
     {
         id: 16,
         name: "Docker",
-        image: "/src/assets/technologies/docker-logo.svg",
+        image: "../assets/technologies/docker-logo.svg",
         type: "dev",
         category: "deployment",
 
@@ -130,7 +130,7 @@ export default [
     {
         id: 17,
         name: "AWS",
-        image: "/src/assets/technologies/aws-logo.svg",
+        image: "../assets/technologies/aws-logo.svg",
         type: "dev",
         category: "deployment",
 
@@ -138,7 +138,7 @@ export default [
     {
         id: 18,
         name: "Firebase",
-        image: "/src/assets/technologies/firebase-logo.svg",
+        image: "../assets/technologies/firebase-logo.svg",
         type: "web",
         category: "back",
 
@@ -146,7 +146,7 @@ export default [
     {
         id: 19,
         name: "MySQL",
-        image: "/src/assets/technologies/mysql-logo.svg",
+        image: "../assets/technologies/mysql-logo.svg",
         type: "web",
         category: "back"
 
@@ -154,7 +154,7 @@ export default [
     {
         id: 20,
         name: "Sqlite",
-        image: "/src/assets/technologies/sqlite-logo.svg",
+        image: "../assets/technologies/sqlite-logo.svg",
         type: "web",
         category: "back"
 
@@ -162,7 +162,7 @@ export default [
     {
         id: 21,
         name: "Git",
-        image: "/src/assets/technologies/git-logo.svg",
+        image: "../assets/technologies/git-logo.svg",
         type: "dev",
         category: "version"
 
@@ -170,7 +170,7 @@ export default [
     {
         id: 22,
         name: "LangChain",
-        image: "/src/assets/technologies/langchain-logo.svg",
+        image: "../assets/technologies/langchain-logo.svg",
         type: "ml",
         category: "agents"
 
@@ -178,28 +178,28 @@ export default [
     {
         id: 23,
         name: "Next.js",
-        image: "/src/assets/technologies/nextjs-logo.svg",
+        image: "../assets/technologies/nextjs-logo.svg",
         type: "web",
         category: "back"
     },
     {
         id: 24,
         name: "FastAPI",
-        image: "/src/assets/technologies/fastapi-logo.svg",
+        image: "../assets/technologies/fastapi-logo.svg",
         type: "web",
         category: "back"
     },
     {
         id: 25,
         name: "Framer Motion",
-        image: "/src/assets/technologies/framer-logo.svg",
+        image: "../assets/technologies/framer-logo.svg",
         type: "web",
         category: "back"
     },
     {
         id: 26,
         name: "Flask",
-        image: "/src/assets/technologies/flask-logo.svg",
+        image: "../assets/technologies/flask-logo.svg",
         type: "web",
         category: "back"
     },
