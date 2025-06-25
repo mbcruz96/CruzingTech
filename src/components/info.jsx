@@ -1,4 +1,4 @@
-import linkedInLogo from "/src/assets/socials/linkedIn-logo.svg"
+import linkedInLogo from "./../assets/socials/linkedIn-logo.svg"
 import instaLogo from "/src/assets/socials/instagram-logo.svg"
 import youtubeLogo from "/src/assets/socials/youtube-logo.svg"
 import xLogo from "/src/assets/socials/x-logo.png"
