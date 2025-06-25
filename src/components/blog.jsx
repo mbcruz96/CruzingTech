@@ -1,4 +1,4 @@
-import Header from "/src/components/header"
+import Header from "./header"
 import { Link } from "react-router-dom"
 
 export default function Blog() {

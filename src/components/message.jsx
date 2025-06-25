@@ -1,5 +1,5 @@
 import { forwardRef } from "react"
-import sendMail from "/src/script";
+import sendMail from "../script";
 const Message = forwardRef(function Message(props, ref) {
     return (
         <section className="h-auto mt-10 flex justify-center items-center bg-white  text-black p-8 gap-12" ref={ref}>

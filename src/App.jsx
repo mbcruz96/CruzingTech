@@ -1,6 +1,6 @@
 import {BrowserRouter, Routes, Route, Link} from "react-router-dom"
-import Main from "/src/components/main"
-import Blog from "/src/components/blog"
+import Main from "./components/main"
+import Blog from "./components/blog"
 
 export default function App() {
   return (

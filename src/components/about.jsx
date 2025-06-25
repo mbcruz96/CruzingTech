@@ -1,5 +1,5 @@
 import { useState, forwardRef } from "react"
-import portfolioPic from "/src/assets/porfolio-pic.jpg"
+import portfolioPic from "../assets/porfolio-pic.jpg"
 import Description from "./description"
 import Education from "./education"
 import Info from "./info"

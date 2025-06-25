@@ -1,8 +1,8 @@
-import linkedInLogo from "./../assets/socials/linkedIn-logo.svg"
-import instaLogo from "/src/assets/socials/instagram-logo.svg"
-import youtubeLogo from "/src/assets/socials/youtube-logo.svg"
-import xLogo from "/src/assets/socials/x-logo.png"
-import githubLogo from "/src/assets/technologies/github-logo.svg"
+import linkedInLogo from "../assets/socials/linkedIn-logo.svg"
+import instaLogo from "../assets/socials/instagram-logo.svg"
+import youtubeLogo from "../assets/socials/youtube-logo.svg"
+import xLogo from "../assets/socials/x-logo.png"
+import githubLogo from "../assets/technologies/github-logo.svg"
 
 export default function Info() {
     return (

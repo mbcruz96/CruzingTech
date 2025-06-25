@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import brandLogo from "/src/assets/brand-logo.svg";
-import Blog from "/src/components/blog";
+import brandLogo from "../assets/brand-logo.svg";
 
 export default function Header(props) {
 
