@@ -84,7 +84,8 @@ header {
 }
 
 .about-image > img {
-    height: 100%;
+    height: auto;
+    width: auto;
     border-radius: 60px;
 }
 
@@ -110,6 +111,7 @@ header {
     padding: 5px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    font-size: 0.9rem;
     /* border-radius: 5px; */
 
 }
@@ -221,6 +223,7 @@ header {
     height: 50px;
     border-radius: 50px;
     font-size: 0.8rem;
+    text-align: center;
 }
 
 .services-text {
@@ -235,12 +238,4 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.recaptcha {
-    margin-top: 20px;
-}
-
-.unverified {
-    outline-color: red;
 }
