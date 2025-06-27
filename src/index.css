@@ -236,3 +236,11 @@ header {
     justify-content: center;
     align-items: center;
 }
+
+.recaptcha {
+    margin-top: 20px;
+}
+
+.unverified {
+    outline-color: red;
+}

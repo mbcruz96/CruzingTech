@@ -1,13 +1,29 @@
-import { forwardRef, useState } from "react"
+import { forwardRef, useState, useRef } from "react"
+import ReCaptcha from "react-google-recaptcha";
+import clsx from "clsx";
 import sendMail from "../script";
+import { form, s } from "motion/react-client";
 
 const Message = forwardRef(function Message(props, ref) {
     const [isSent, setIsSent] = useState(false);
+    const recaptchaRef = useRef(null);
 
-    function handleSend(e) {
-        e.preventDefault();
-        sendMail();
-        setIsSent(true);
+    function onChange() {
+        // Handle the reCAPTCHA response here
+        console.log("Captcha verified successfully!");  
+    }
+
+    function handleSend(formData) {
+        const data = Object.fromEntries(formData);
+        const recaptchaValue = recaptchaRef.current.getValue();
+        if (data.name && data.email && data.subject && data.message && recaptchaValue) {
+            sendMail(recaptchaValue);
+            setIsSent(true);
+            setIsUnverified(false);
+        }
+        else {
+            alert("Please fill all fields and complete the reCAPTCHA.");
+        }
     }
 
     return (
@@ -18,11 +34,12 @@ const Message = forwardRef(function Message(props, ref) {
                     To inquire about my services, discuss potential collaborations or job opportunities, or just to say hello, feel free to reach out via email. I look forward to hearing from you!
                 </p>
             </div>
-            {!isSent && <form className="mt-8 w-2/3">
+            {!isSent && <form className="mt-8 w-2/3" action={handleSend}>
                 <div className="flex flex-col gap-4">
                     <input 
                         type="text" 
                         id="name"
+                        name="name"
                         placeholder="Your Name" 
                         className="p-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required
@@ -30,6 +47,7 @@ const Message = forwardRef(function Message(props, ref) {
                     <input 
                         type="email" 
                         id="email"
+                        name="email"
                         placeholder="Your Email" 
                         className="p-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required
@@ -37,6 +55,7 @@ const Message = forwardRef(function Message(props, ref) {
                     <input 
                         type="text"
                         id="subject"
+                        name="subject"
                         placeholder="Subject"
                         className="p-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required
@@ -44,16 +63,25 @@ const Message = forwardRef(function Message(props, ref) {
                     <textarea 
                         placeholder="Your Message" 
                         id="message"
+                        name="message"
                         className="p-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 h-32"
                         required
                     ></textarea>
                     <button 
                         type="submit" 
-                        onClick={handleSend}
                         className="bg-blue-500 text-white p-2 rounded-2xl hover:bg-blue-600 transition duration-200"
                     >
                         Send Message
                     </button>
+                    <div className="flex justify-center items-center">
+                        <ReCaptcha
+                            ref={recaptchaRef}
+                            sitekey="6LfqWnArAAAAADKBBiv6czgVByvgNvzZqYCl9Phw"
+                            onChange={onChange}
+                            className="mt-4"
+                            required
+                        />
+                        </div>
                 </div>
             </form>}
             {isSent && <div className="flex flex-col items-center w-2/3 bg-green-100 p-6 rounded-lg shadow-lg">
@@ -62,6 +90,7 @@ const Message = forwardRef(function Message(props, ref) {
                     Thank you for reaching out! I will get back to you as soon as possible.
                 </p>
             </div>}
+            
         </section>
     )
 });

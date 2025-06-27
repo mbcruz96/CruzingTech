@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import {BrowserRouter, Routes, Route, Link} from "react-router-dom"
 import Main from "./components/main"
 import Blog from "./components/blog"
