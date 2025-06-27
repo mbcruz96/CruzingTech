@@ -25,7 +25,7 @@ export default function Info() {
                 </a>
             </div>
             <div className="flex justify-center mx-auto mt-10">
-                <a href="/src/assets/resume.docx">
+                <a href="/Resume.pdf">
                     <button className="w-75 h-12 rounded-3xl bg-orange-700 opacity-10 hover:opacity-100 cursor-pointer"><i className="fa fa-download"></i> Download Resume</button>
                 </a>
             </div>    
