@@ -6,6 +6,7 @@ import { form, s } from "motion/react-client";
 
 const Message = forwardRef(function Message(props, ref) {
     const [isSent, setIsSent] = useState(false);
+    const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
     const recaptchaRef = useRef(null);
 
     function onChange() {
@@ -13,13 +14,13 @@ const Message = forwardRef(function Message(props, ref) {
         console.log("Captcha verified successfully!");  
     }
 
-    function handleSend(formData) {
-        const data = Object.fromEntries(formData);
+    const handleSend = (e) => {
+        e.preventDefault();
         const recaptchaValue = recaptchaRef.current.getValue();
-        if (data.name && data.email && data.subject && data.message && recaptchaValue) {
+        if (formData.name && formData.email && formData.subject && formData.message && recaptchaValue) {
             sendMail(recaptchaValue);
             setIsSent(true);
-            setIsUnverified(false);
+            setFormData({ name: "", email: "", subject: "", message: "" }); // clear fields on success
         }
         else {
             alert("Please fill all fields and complete the reCAPTCHA.");
@@ -34,7 +35,7 @@ const Message = forwardRef(function Message(props, ref) {
                     To inquire about my services, discuss potential collaborations or job opportunities, or just to say hello, feel free to reach out via email. I look forward to hearing from you!
                 </p>
             </div>
-            {!isSent && <form className="mt-8 w-2/3" action={handleSend}>
+            {!isSent && <form className="mt-8 w-2/3" onSubmit={handleSend}>
                 <div className="flex flex-col gap-4">
                     <input 
                         type="text" 
@@ -42,6 +43,8 @@ const Message = forwardRef(function Message(props, ref) {
                         name="name"
                         placeholder="Your Name" 
                         className="p-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         required
                     />
                     <input 
@@ -50,6 +53,8 @@ const Message = forwardRef(function Message(props, ref) {
                         name="email"
                         placeholder="Your Email" 
                         className="p-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         required
                     />
                     <input 
@@ -58,6 +63,8 @@ const Message = forwardRef(function Message(props, ref) {
                         name="subject"
                         placeholder="Subject"
                         className="p-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        value={formData.subject}
+                        onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                         required
                     />
                     <textarea 
@@ -65,6 +72,8 @@ const Message = forwardRef(function Message(props, ref) {
                         id="message"
                         name="message"
                         className="p-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 h-32"
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         required
                     ></textarea>
                     <button 
