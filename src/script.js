@@ -14,9 +14,12 @@ export default function sendMail(recaptcha_value){
     const service_id = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const template_id = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     
-    emailjs.init(email_key);
+    emailjs.init({publicKey: email_key});
 
-    emailjs.send(service_id, template_id, params).then(
+    emailjs.send(service_id, template_id, params, {
+        publicKey: email_key,
+    })
+    .then(
         alert("Message sent successfully!"))
         .catch(err => console.error("Failed to send message. Error: ", err));
 };
