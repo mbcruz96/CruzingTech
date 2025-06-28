@@ -85,7 +85,7 @@ const Message = forwardRef(function Message(props, ref) {
                     <div className="flex justify-center items-center">
                         <ReCaptcha
                             ref={recaptchaRef}
-                            sitekey={recaptchaSiteKey}
+                            sitekey="6LfqWnArAAAAADKBBiv6czgVByvgNvzZqYCl9Phw"
                             onChange={onChange}
                             className="mt-4"
                             required
