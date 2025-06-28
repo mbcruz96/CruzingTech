@@ -84,8 +84,7 @@ header {
 }
 
 .about-image > img {
-    height: auto;
-    width: auto;
+    /* height: auto; */
     border-radius: 60px;
 }
 

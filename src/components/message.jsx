@@ -8,7 +8,7 @@ const Message = forwardRef(function Message(props, ref) {
     const [isSent, setIsSent] = useState(false);
     const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
     const recaptchaRef = useRef(null);
-
+    const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
     function onChange() {
         // Handle the reCAPTCHA response here
         console.log("Captcha verified successfully!");  
@@ -85,7 +85,7 @@ const Message = forwardRef(function Message(props, ref) {
                     <div className="flex justify-center items-center">
                         <ReCaptcha
                             ref={recaptchaRef}
-                            sitekey="6LfqWnArAAAAADKBBiv6czgVByvgNvzZqYCl9Phw"
+                            sitekey={recaptchaSiteKey}
                             onChange={onChange}
                             className="mt-4"
                             required
