@@ -1,5 +1,4 @@
 import emailjs from '@emailjs/browser';
-import { em } from 'motion/react-client';
 
 export default function sendMail(recaptcha_value){
     const params = {
@@ -16,9 +15,7 @@ export default function sendMail(recaptcha_value){
     
     emailjs.init({publicKey: email_key});
 
-    emailjs.send(service_id, template_id, params, {
-        publicKey: email_key,
-    })
+    emailjs.send(service_id, template_id, params, email_key,)
     .then(
         alert("Message sent successfully!"))
         .catch(err => console.error("Failed to send message. Error: ", err));
