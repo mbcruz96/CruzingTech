@@ -8,7 +8,6 @@ const Message = forwardRef(function Message(props, ref) {
     const [isSent, setIsSent] = useState(false);
     const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
     const recaptchaRef = useRef(null);
-    const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
     
     function onChange() {
         // Handle the reCAPTCHA response here
@@ -18,7 +17,6 @@ const Message = forwardRef(function Message(props, ref) {
     const handleSend = (e) => {
         e.preventDefault();
         const recaptchaValue = recaptchaRef.current.getValue();
-        console.log("reCAPTCHA Value:", recaptchaSiteKey);
         if (formData.name && formData.email && formData.subject && formData.message && recaptchaValue) {
             sendMail(recaptchaValue);
             setIsSent(true);
