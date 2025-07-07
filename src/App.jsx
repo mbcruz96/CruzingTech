@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import {BrowserRouter, Routes, Route, Link} from "react-router-dom"
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from '@vercel/analytics/react';
 import Main from "./components/main"
 import Blog from "./components/blog"
 
