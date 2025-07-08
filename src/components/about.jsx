@@ -66,7 +66,7 @@ const About = forwardRef(function About(props, ref) {
                     <button
                         className={`btn4${isHire ? " active-btn" : ""}`}
                         onClick={button_clicked}
-                    >Hire Me</button>
+                    >Hire</button>
                 </div>
 
                 {isAbout && <Description />}
