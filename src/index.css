@@ -84,7 +84,8 @@ header {
 }
 
 .about-image > img {
-    height: 600px;
+    max-height: 600px;
+    height: auto;
     width: auto;
     border-radius: 60px;
 }
@@ -101,7 +102,7 @@ header {
     align-items: center;
     /* gap: 5px; */
     height: 25%;
-    width: 100%;
+    width: auto;
 }
 
 .btn-pane > button {

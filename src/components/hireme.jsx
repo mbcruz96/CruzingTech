@@ -51,7 +51,7 @@ export default function RunawayButtonSection() {
       style={{
         position: "relative",
         width: "400px auto",
-        height: "300px",
+        height: "300px auto",
         // border: "2px solid #ccc",
         margin: "40px auto",
         overflow: "hidden",
