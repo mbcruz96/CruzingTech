@@ -101,7 +101,7 @@ header {
     align-items: center;
     /* gap: 5px; */
     height: 25%;
-    width: auto;
+    width: 100%;
 }
 
 .btn-pane > button {
