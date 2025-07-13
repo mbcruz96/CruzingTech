@@ -41,7 +41,7 @@ const Services = forwardRef(function Services(props, ref) {
                     initial="hidden"
                     whileInView="visible"
                 >
-                    Custom ML Models
+                    Machine Learning Solutions
                 </motion.span>
                 <motion.span 
                     variants={serviceVariant}
