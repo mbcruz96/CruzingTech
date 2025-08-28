@@ -2,7 +2,7 @@ import { useState, forwardRef } from "react"
 import portfolioPic from "../assets/porfolio-pic.jpg"
 import Description from "./description"
 import Education from "./education"
-import Info from "./info"
+import Socials from "./socials"
 import HireMe from "./hireme"
 
 
@@ -72,9 +72,9 @@ const About = forwardRef(function About(props, ref) {
 
                 {isAbout && <Description />}
 
-                {isEducation && <Education />}
+                {isSocials && <Socials />}
 
-                {isSocials && <Info />}
+                {isEducation && <Education />}
 
                 {isHire && <HireMe/>}
             </div>
