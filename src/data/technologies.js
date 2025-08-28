@@ -203,6 +203,20 @@ export default [
         type: "web",
         category: "back"
     },
+    {
+        id: 27,
+        name: "Express.js",
+        image: "/expressjs-logo.svg",
+        type: "web",
+        category: "back"
+    },
+    {
+        id: 28,
+        name: "TypeScript",
+        image: "/typescript-logo.svg",
+        type: "web",
+        category: "front"
+    },
 
     
 ]
