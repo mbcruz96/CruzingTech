@@ -50,7 +50,7 @@ export default function AboutMe() {
                     <AnimatePresence mode="wait">
                         <motion.span
                             key={listIndex}
-                            className="text-xl italic inline-block"
+                            className="text-xl italic inline-block animated-title"
                             variants={wordContainer}
                             initial="hidden"
                             animate="visible"
