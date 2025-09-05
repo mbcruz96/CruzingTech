@@ -6,7 +6,6 @@ import { form, s } from "motion/react-client";
 
 const Message = forwardRef(function Message(props, ref) {
     const [isSent, setIsSent] = useState(false);
-    const [isSubmitting, setIsSubmitting] = useState(false);
     const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
     const recaptchaRef = useRef(null);
     
@@ -17,16 +16,11 @@ const Message = forwardRef(function Message(props, ref) {
 
     const handleSend = (e) => {
         e.preventDefault();
-        if (formData.name && formData.email && formData.subject && formData.message ) {
-            if (!isSubmitting){
-                setIsSubmitting(true);
-            }
-            else {
-                const recaptchaValue = recaptchaRef.current.getValue();
-                sendMail(recaptchaValue);
-                setIsSent(true);
-                setFormData({ name: "", email: "", subject: "", message: "" }); // clear fields on success
-            }    
+        const recaptchaValue = recaptchaRef.current.getValue();
+        if (formData.name && formData.email && formData.subject && formData.message && recaptchaValue) {
+            sendMail(recaptchaValue);
+            setIsSent(true);
+            setFormData({ name: "", email: "", subject: "", message: "" }); // clear fields on success
         }
         else {
             alert("Please fill all fields and complete the reCAPTCHA.");
@@ -88,7 +82,7 @@ const Message = forwardRef(function Message(props, ref) {
                     >
                         Send Message
                     </button>
-                    {isSubmitting && <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center">
                         <ReCaptcha
                             ref={recaptchaRef}
                             sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
@@ -96,7 +90,7 @@ const Message = forwardRef(function Message(props, ref) {
                             className="mt-4"
                             required
                         />
-                        </div>}
+                        </div>
                 </div>
             </form>}
             {isSent && <div className="flex flex-col items-center w-2/3 bg-green-100 p-6 rounded-lg shadow-lg">
